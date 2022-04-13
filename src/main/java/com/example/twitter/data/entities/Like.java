@@ -16,10 +16,11 @@ public class Like {
     @JoinColumn(name = "USER_ID", referencedColumnName = "ID", nullable = false)
     @JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id")
     @JsonIdentityReference(alwaysAsId=true) // otherwise first ref as POJO, others as id
+    @JsonBackReference(value = "c")
     private User usersByUserId;
     @ManyToOne
     @JoinColumn(name = "POST_ID", referencedColumnName = "ID", nullable = false)
-    @JsonBackReference
+    @JsonBackReference(value = "a")
     private Post postsByPostId;
 
     public int getId() {

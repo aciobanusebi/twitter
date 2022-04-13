@@ -24,11 +24,11 @@ public class Follow {
     private long timestamp;
     @ManyToOne
     @JoinColumn(name = "USER_ID", referencedColumnName = "ID", nullable = false, insertable = false, updatable = false)
-    @JsonBackReference
+    @JsonBackReference(value = "a")
     private User usersByUserId;
     @ManyToOne
     @JoinColumn(name = "FOLLOWING_USER_ID", referencedColumnName = "ID", nullable = false, insertable = false, updatable = false)
-    @JsonBackReference
+    @JsonBackReference(value = "b")
     private User usersByFollowingUserId;
 
     public long getTimestamp() {

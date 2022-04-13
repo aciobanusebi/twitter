@@ -28,19 +28,19 @@ public class User {
     @Column(name = "PASSWORD", nullable = false, length = 255)
     private String password;
     @OneToMany(mappedBy = "usersByUserId",cascade=CascadeType.ALL)
-    @JsonManagedReference
+    @JsonManagedReference(value = "a")
     private Collection<Follow> followsById;
     @OneToMany(mappedBy = "usersByFollowingUserId",cascade=CascadeType.ALL)
-    @JsonManagedReference
+    @JsonManagedReference(value = "b")
     private Collection<Follow> followsById_0;
     @OneToMany(mappedBy = "usersByUserId",cascade=CascadeType.ALL)
-    @JsonManagedReference
+    @JsonManagedReference(value = "c")
     private Collection<Like> likesById;
     @OneToMany(mappedBy = "usersByUserId",cascade=CascadeType.ALL)
-    @JsonManagedReference
+    @JsonManagedReference(value = "d")
     private Collection<Mention> mentionsById;
     @OneToMany(mappedBy = "usersByUserId",cascade=CascadeType.ALL)
-    @JsonManagedReference
+    @JsonManagedReference(value = "e")
     private Collection<Post> postsById;
 
     public String getId() {

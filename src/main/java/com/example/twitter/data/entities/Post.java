@@ -24,16 +24,16 @@ public class Post {
     @OneToMany(mappedBy = "postsByPostId",cascade=CascadeType.ALL)
     private Collection<Like> likesById;
     @OneToMany(mappedBy = "postsByPostId",cascade=CascadeType.ALL)
-    @JsonBackReference
+    @JsonBackReference(value="3")
     private Collection<Mention> mentionsById;
     @ManyToOne
     @JoinColumn(name = "USER_ID", referencedColumnName = "ID", nullable = false)
-    @JsonBackReference
+    @JsonBackReference(value = "e")
     private User usersByUserId;
 //    @Column(name = "USER_ID")
 //    private String userId;
     @OneToOne(mappedBy = "postsByPostId",cascade=CascadeType.ALL)
-    @JsonBackReference
+    @JsonBackReference(value="4")
     private Reply repliesById;
     @OneToMany(mappedBy = "postsByParentPostId",cascade=CascadeType.ALL)
 //    @JsonBackReference

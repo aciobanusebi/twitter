@@ -16,7 +16,7 @@ public class Reply extends Post {
     @JoinColumn(name = "POST_ID", referencedColumnName = "ID", nullable = false, insertable = false, updatable = false)
 //    @JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class, property="id")
 //    @JsonIdentityReference(alwaysAsId=true) // otherwise first ref as POJO, others as id
-    @JsonBackReference
+    @JsonBackReference(value="1")
     private Post postsByPostId;
     @ManyToOne
     @JoinColumn(name = "PARENT_POST_ID", referencedColumnName = "ID", nullable = false)

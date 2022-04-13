@@ -57,17 +57,19 @@ public class ReplyService {
         replyRepository.save(reply);
 
 
+        if (replyRequestBody.mentions != null) {
+            for (String localUserId : replyRequestBody.mentions) {
+                Mention mention = new Mention();
+                User localUser = new User();
+                localUser.setId(localUserId);
 
-        for (String localUserId : replyRequestBody.mentions) {
-            Mention mention = new Mention();
-            User localUser = new User();
-            localUser.setId(localUserId);
+                mention.setPostsByPostId(reply);
+                mention.setUsersByUserId(localUser);
 
-            mention.setPostsByPostId(reply);
-            mention.setUsersByUserId(localUser);
-
-            mentionRepository.save(mention);
+                mentionRepository.save(mention);
+            }
         }
+
 
         // NOT WORKING:
 //        Post post = postService.addPostProcessings(replyRequestBody.user,

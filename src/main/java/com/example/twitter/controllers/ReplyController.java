@@ -31,14 +31,4 @@ public class ReplyController {
         replyService.replyPost(json);
     }
 
-
-
-
-
-//
-//    @DeleteMapping(value = "/like/{likeId}")
-//    public void removeLike(@PathVariable Integer likeId) {
-//        likeService.removeLike(likeId);
-//    }
-
 }

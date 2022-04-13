@@ -37,16 +37,19 @@ public class PostService {
         post.setTimestamp(new Timestamp(System.currentTimeMillis()).getTime());
         post=postRepository.save(post);
 
-        for (String localUserId : mentions) {
-            Mention mention = new Mention();
-            User localUser = new User();
-            localUser.setId(localUserId);
+        if(mentions != null) {
+            for (String localUserId : mentions) {
+                Mention mention = new Mention();
+                User localUser = new User();
+                localUser.setId(localUserId);
 
-            mention.setPostsByPostId(post);
-            mention.setUsersByUserId(localUser);
+                mention.setPostsByPostId(post);
+                mention.setUsersByUserId(localUser);
 
-            mentionRepository.save(mention);
+                mentionRepository.save(mention);
+            }
         }
+
         return post;
     }
 
@@ -76,11 +79,14 @@ public class PostService {
             throw new UserNotFoundException(json.user);
         }
 
-        for (String userId : json.mentions) {
-            if(!userRepository.existsById(userId)) {
-                throw new UserNotFoundException(userId);
+        if(json.mentions != null) {
+            for (String userId : json.mentions) {
+                if(!userRepository.existsById(userId)) {
+                    throw new UserNotFoundException(userId);
+                }
             }
         }
+
 
         addPostProcessings(json.user, json.message, json.mentions);
     }

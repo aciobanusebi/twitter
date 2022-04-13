@@ -14,11 +14,11 @@ public class Mention {
     private int id;
     @ManyToOne
     @JoinColumn(name = "USER_ID", referencedColumnName = "ID", nullable = false)
-    @JsonBackReference
+    @JsonBackReference(value = "d")
     private User usersByUserId;
     @ManyToOne
     @JoinColumn(name = "POST_ID", referencedColumnName = "ID", nullable = false)
-    @JsonBackReference
+    @JsonBackReference(value="2")
     private Post postsByPostId;
 
     public int getId() {
