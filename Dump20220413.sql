@@ -39,7 +39,7 @@ CREATE TABLE `follows` (
 
 LOCK TABLES `follows` WRITE;
 /*!40000 ALTER TABLE `follows` DISABLE KEYS */;
-INSERT INTO `follows` VALUES ('acsebi','sebi',1648738169434);
+INSERT INTO `follows` VALUES ('acsebi','sebi',1649880133879);
 /*!40000 ALTER TABLE `follows` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -59,7 +59,7 @@ CREATE TABLE `likes` (
   KEY `POST_ID` (`POST_ID`),
   CONSTRAINT `likes_ibfk_1` FOREIGN KEY (`USER_ID`) REFERENCES `users` (`ID`),
   CONSTRAINT `likes_ibfk_2` FOREIGN KEY (`POST_ID`) REFERENCES `posts` (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,7 +68,6 @@ CREATE TABLE `likes` (
 
 LOCK TABLES `likes` WRITE;
 /*!40000 ALTER TABLE `likes` DISABLE KEYS */;
-INSERT INTO `likes` VALUES (5,'sebi',8);
 /*!40000 ALTER TABLE `likes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -88,7 +87,7 @@ CREATE TABLE `mentions` (
   KEY `POST_ID` (`POST_ID`),
   CONSTRAINT `mentions_ibfk_1` FOREIGN KEY (`USER_ID`) REFERENCES `users` (`ID`),
   CONSTRAINT `mentions_ibfk_2` FOREIGN KEY (`POST_ID`) REFERENCES `posts` (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -97,7 +96,6 @@ CREATE TABLE `mentions` (
 
 LOCK TABLES `mentions` WRITE;
 /*!40000 ALTER TABLE `mentions` DISABLE KEYS */;
-INSERT INTO `mentions` VALUES (1,'acsebi',18),(2,'acsebi',19),(3,'sebi',19),(4,'acsebi',20),(5,'sebi',21),(6,'sebi',22),(7,'sebi',23),(8,'sebi',24),(9,'sebi',25),(10,'sebi',26),(11,'sebi',27),(12,'sebi',28),(13,'sebi',29),(14,'sebi',30),(15,'sebi',39),(16,'sebi',40),(17,'sebi',42),(18,'sebi',44),(19,'sebi',46),(20,'sebi',48),(21,'sebi',50),(22,'sebi',52);
 /*!40000 ALTER TABLE `mentions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -116,7 +114,7 @@ CREATE TABLE `posts` (
   PRIMARY KEY (`ID`),
   KEY `USER_ID` (`USER_ID`),
   CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`USER_ID`) REFERENCES `users` (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -125,7 +123,7 @@ CREATE TABLE `posts` (
 
 LOCK TABLES `posts` WRITE;
 /*!40000 ALTER TABLE `posts` DISABLE KEYS */;
-INSERT INTO `posts` VALUES (8,'acsebi','Optional[com.example.twitter.data.entities.Post@f9fe1ef7]',1649794017899),(9,'acsebi','Ce fain!',1649794320300),(11,'sebi','Ce fain!',1649837193480),(12,'sebi','Ce fain!',1649837332975),(13,'sebi','Ce fain!',1649837794897),(14,'sebi','Ce fain!',1649837830337),(15,'sebi','1',1649837846968),(16,'sebi','1',1649838093333),(17,'sebi','123',1649838334113),(18,'sebi','123',1649842608233),(19,'sebi','Ce a vrut sa spuna @acsebi? Dar @sebi?',1649842660023),(20,'sebi','Ce a vrut sa spuna @acsebi????',1649843120756),(21,'acsebi','@sebi Acesta este un reply!',1649852124481),(22,'acsebi','@sebi Acesta este un reply!',1649852464758),(23,'acsebi','@sebi Acesta este un reply!',1649852632035),(24,'acsebi','@sebi Acesta este un reply!',1649852854643),(25,'acsebi','@sebi Acesta este un reply!',1649853438064),(26,'acsebi','@sebi Acesta este un reply!',1649853538886),(27,'acsebi','@sebi Acesta este un reply!',1649853636773),(28,'acsebi','@sebi Acesta este un reply!',1649854043229),(29,'acsebi','@sebi Acesta este un reply!',1649854044730),(30,'acsebi','@sebi Acesta este un reply!',1649854080171),(32,'acsebi','@sebi Acesta este un reply!',1649855616925),(33,'acsebi','@sebi Acesta este un reply!',1649855737255),(34,'acsebi','@sebi Acesta este un reply!',1649855933386),(39,'acsebi','@sebi Acesta este un reply!',1649857596216),(40,'acsebi','@sebi Acesta este un reply!',1649857662124),(42,'acsebi','@sebi Acesta este un reply!',1649857723151),(44,'acsebi','@sebi Acesta este un reply!',1649857736611),(46,'acsebi','@sebi Acesta este un reply!',1649858827005),(48,'acsebi','@sebi Acesta este un reply!',1649859151064),(50,'acsebi','@sebi AAAAcesta este un reply!',1649859175704),(52,'acsebi','@sebi CEEEE? AAAAcesta este un reply!',1649859210462);
+INSERT INTO `posts` VALUES (1,'sebi','Ce fain!',1649880136798);
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -192,4 +190,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-13 20:41:29
+-- Dump completed on 2022-04-13 23:11:07

@@ -296,6 +296,26 @@
 					"response": []
 				},
 				{
+					"name": "follow/acsebi/sebi",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/follow/acsebi/sebi",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"follow",
+								"acsebi",
+								"sebi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "users/acsebi",
 					"request": {
 						"method": "DELETE",
@@ -328,6 +348,54 @@
 							"path": [
 								"users",
 								"acsebi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/acsebi",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"A\",\r\n    \"lastName\": \"B\",\r\n    \"email\": \"C\",\r\n    \"password\": \"D\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users/acsebi",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"acsebi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "follow/acsebi/sebi",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/follow/acsebi/sebi",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"follow",
+								"acsebi",
+								"sebi"
 							]
 						}
 					},
@@ -372,108 +440,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"user\": \"sebi\",\r\n    \"message\": \"Ce fain!\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:8080/post",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"post"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "users/sebi",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "localhost:8080/users/sebi",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"users",
-								"sebi"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "users/sebi",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"firstName\": \"A\",\r\n    \"lastName\": \"B\",\r\n    \"email\": \"C\",\r\n    \"password\": \"D\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:8080/users/sebi",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"users",
-								"sebi"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "post",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"user\": \"sebi\",\r\n    \"message\": \"Ce fain!\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:8080/post",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"post"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "post",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"user\": \"sebi\",\r\n    \"message\": \"Ce fain!\"\r\n}",
+							"raw": "{\r\n    \"user\": \"sebi\",\r\n    \"message\": \"Ce frumos!\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -570,12 +537,12 @@
 					"response": []
 				},
 				{
-					"name": "post?user=sebi&minTimestamp=1648728460074",
+					"name": "post?user=sebi&minTimestamp=...",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/post?user=sebi&minTimestamp=1648728460074",
+							"raw": "localhost:8080/post?user=sebi&minTimestamp=1649880136798",
 							"host": [
 								"localhost"
 							],
@@ -590,7 +557,7 @@
 								},
 								{
 									"key": "minTimestamp",
-									"value": "1648728460074"
+									"value": "1649880136798"
 								}
 							]
 						}
@@ -620,6 +587,25 @@
 									"key": "email",
 									"value": "a"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "feed/sebi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/feed/sebi",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"feed",
+								"sebi"
 							]
 						}
 					},
@@ -664,38 +650,38 @@
 					"response": []
 				},
 				{
-					"name": "post/1",
+					"name": "post/...",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/post/6",
+							"raw": "localhost:8080/post/2",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"post",
-								"6"
+								"2"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "post/6",
+					"name": "post/...",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/post/6",
+							"raw": "localhost:8080/post/2",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"post",
-								"6"
+								"2"
 							]
 						}
 					},
@@ -726,20 +712,19 @@
 					"response": []
 				},
 				{
-					"name": "repost/7?user=acsebi",
+					"name": "repost/...?user=acsebi",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/repost/7/?newUser=acsebi",
+							"raw": "localhost:8080/repost/1?newUser=acsebi",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"repost",
-								"7",
-								""
+								"1"
 							],
 							"query": [
 								{
@@ -873,12 +858,12 @@
 			"name": "Like",
 			"item": [
 				{
-					"name": "like/sebi/7",
+					"name": "like/sebi/...",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/like/sebi/7",
+							"raw": "localhost:8080/like/sebi/3",
 							"host": [
 								"localhost"
 							],
@@ -886,19 +871,19 @@
 							"path": [
 								"like",
 								"sebi",
-								"7"
+								"3"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "post?user=sebi",
+					"name": "post?user=acsebi",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/post?user=sebi",
+							"raw": "localhost:8080/post?user=acsebi",
 							"host": [
 								"localhost"
 							],
@@ -909,7 +894,7 @@
 							"query": [
 								{
 									"key": "user",
-									"value": "sebi"
+									"value": "acsebi"
 								}
 							]
 						}
@@ -917,7 +902,7 @@
 					"response": []
 				},
 				{
-					"name": "like/1",
+					"name": "like/...",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -936,12 +921,12 @@
 					"response": []
 				},
 				{
-					"name": "post?user=sebi",
+					"name": "post?user=acsebi",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/post?user=sebi",
+							"raw": "localhost:8080/post?user=acsebi",
 							"host": [
 								"localhost"
 							],
@@ -952,7 +937,7 @@
 							"query": [
 								{
 									"key": "user",
-									"value": "sebi"
+									"value": "acsebi"
 								}
 							]
 						}
@@ -960,12 +945,12 @@
 					"response": []
 				},
 				{
-					"name": "like/sebi/7",
+					"name": "like/sebi/...",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/like/sebi/7",
+							"raw": "localhost:8080/like/sebi/3",
 							"host": [
 								"localhost"
 							],
@@ -973,19 +958,19 @@
 							"path": [
 								"like",
 								"sebi",
-								"7"
+								"3"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "post?user=sebi",
+					"name": "post?user=acsebi",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/post?user=sebi",
+							"raw": "localhost:8080/post?user=acsebi",
 							"host": [
 								"localhost"
 							],
@@ -996,7 +981,7 @@
 							"query": [
 								{
 									"key": "user",
-									"value": "sebi"
+									"value": "acsebi"
 								}
 							]
 						}
@@ -1061,12 +1046,12 @@
 					"response": []
 				},
 				{
-					"name": "like/sebi/7",
+					"name": "like/sebi/...",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/like/sebi/7",
+							"raw": "localhost:8080/like/sebi/3",
 							"host": [
 								"localhost"
 							],
@@ -1074,19 +1059,19 @@
 							"path": [
 								"like",
 								"sebi",
-								"7"
+								"3"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "post?user=sebi",
+					"name": "post?user=acsebi",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/post?user=sebi",
+							"raw": "localhost:8080/post?user=acsebi",
 							"host": [
 								"localhost"
 							],
@@ -1097,7 +1082,7 @@
 							"query": [
 								{
 									"key": "user",
-									"value": "sebi"
+									"value": "acsebi"
 								}
 							]
 						}
@@ -1105,19 +1090,19 @@
 					"response": []
 				},
 				{
-					"name": "post/7",
+					"name": "post/...",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/post/7",
+							"raw": "localhost:8080/post/3",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"post",
-								"7"
+								"3"
 							]
 						}
 					},
@@ -1172,13 +1157,13 @@
 					"response": []
 				},
 				{
-					"name": "post",
+					"name": "reply ...",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"user\": \"acsebi\",\r\n    \"message\": \"@sebi Ce?\",\r\n    \"mentions\": [\"sebi\"],\r\n\r\n    \"isPublic\": true,\r\n    \"parentPostId\": 10\r\n}",
+							"raw": "{\r\n    \"user\": \"acsebi\",\r\n    \"message\": \"@sebi Ce?\",\r\n    \"mentions\": [\"sebi\"],\r\n\r\n    \"isPublic\": true,\r\n    \"parentPostId\": 4\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1247,19 +1232,19 @@
 					"response": []
 				},
 				{
-					"name": "post/10",
+					"name": "post/...",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/post/10",
+							"raw": "localhost:8080/post/4",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"post",
-								"10"
+								"4"
 							]
 						}
 					},
