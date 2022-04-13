@@ -9,8 +9,8 @@ Technologies: Spring Boot, Spring Data JPA, MySQL, OpenAPI documentation (with S
 
 TODO: tests using JUnit
 
-Project specifications: Twitter Project Specifications.pdf
+- Project specifications: Twitter Project Specifications.pdf
 
-MySQL script to create the database: create-db.sql
+- MySQL script to create the database: create-db.sql
 
-Postman requests: twitter.postman_collection.json
+- Postman requests: twitter.postman_collection.json
