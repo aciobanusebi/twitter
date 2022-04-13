@@ -1,6 +1,8 @@
 # twitter
 FII Practic project; Java Backend
 
+IntelIJ Idea project
+
 Technologies: Spring Boot, Spring Data JPA, MySQL, OpenAPI documentation (with Swagger UI)
 
 TODO: tests using JUnit
